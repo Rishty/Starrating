@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+        }
+        .container{
+            height: 100vh;
+            background-color: rgb(140, 255, 240);
+            display: flex;
+            align-items: center;
+        }
+        .box{
+            height: 300px;
+            width: 500px;
+            background-color: rgb(14, 32, 58);
+            color: white;
+            margin-left: 30%;
+            border-radius: 40px;
+            
+        }
+        h1{
+            font-size: 40px;
+            margin-left: 30%;
+            padding-top: 10%;
+        }
+        .star{
+            display: flex;
+            align-items: center;
+            margin-left: 20%;
+            margin-top:10%;
+            font-size: 70px;
+        }
+        .item{
+            cursor: pointer;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h1>Star Rating</h1>
+            <div class="star">
+                <div class="item" onclick="go(0)" >&#9733;</div>
+                <div class="item" onclick="go(1)"  >&#9733;</div>
+                <div class="item" onclick="go(2)" >&#9733;</div>
+                <div class="item" onclick="go(3)" >&#9733;</div>
+                <div class="item" onclick="go(4)" >&#9733;</div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function go(x){
+            let ele = document.getElementsByClassName('item');
+           
+            for(let i=0;i<ele.length;i++){
+                ele[i].style.color='White';
+            }
+            
+            for(let i=0;i<=x;i++){
+            ele[i].style.color='yellow';
+         }
+            
+        }
+    </script>
+</body>
+</html>
